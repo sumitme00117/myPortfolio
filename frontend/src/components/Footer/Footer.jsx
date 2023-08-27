@@ -22,13 +22,13 @@ const Footer = () => {
         <a href="https://github.com/sumitme00117" target="blank">
           <BsGithub />
         </a>
-        <a href="www.linkedin.com/in/sumitme00117" target="blank">
+        <a href="https://www.linkedin.com/in/sumitme00117/" target="blank">
           <BsLinkedin />
         </a>
-        <a href="www.youtube.com" target="blank">
+        <a href="https://www.youtube.com" target="blank">
           <BsYoutube />
         </a>
-        <a href="www.instagram.com" target="blank">
+        <a href="https://www.instagram.com" target="blank">
           <BsInstagram/>
         </a>
       </div>

@@ -17,10 +17,13 @@ import Youtube from './components/Admin/Youtube';
 import Project from './components/Admin/Project'
 import Loader from './components/Loader/Loader';
 function App() {
-
   const dispatch = useDispatch()
   const {isAuthenticated} = useSelector((state)=> state.login)
   const {loading, user} = useSelector((state)=> state.user)
+  
+  
+  
+  
   console.log(loading,user)
   useEffect(()=>{
     dispatch(getUser())
@@ -35,14 +38,15 @@ function App() {
         <>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home youtubes={user.youtube} timelines={user.timeline} skills={user.skills}/>}></Route>
-        <Route path="/about" element={<About about={user.about}/>}></Route>
-        <Route path="/projects" element={<Projects projects={user.projects}/>}></Route>
+      <Route path="/" element={user && <Home youtubes={user.youtube} timelines={user.timeline} skills={user.skills}/>}></Route>
+        <Route path="/about" element={user && <About about={user.about}/>}></Route>
+        <Route path="/projects" element={user && <Projects projects={user.projects}/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/account" element={isAuthenticated ? <AdminPanel/> : <Login/>}></Route>
         <Route path="/admin/timeline" element={isAuthenticated ? <Timeline/> : <Login/>}></Route>
         <Route path="/admin/youtube" element={isAuthenticated ? <Youtube/> : <Login/>}></Route>
         <Route path="/admin/project" element={isAuthenticated ? <Project/> : <Login/>}></Route>
+        
       </Routes>
       <Footer></Footer>
       </>

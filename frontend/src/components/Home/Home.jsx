@@ -100,11 +100,11 @@ const Home = ({timelines, youtubes, skills}) => {
           
           const skillsBox = document.getElementById("homeskillsBox")
           if(window.scrollY > 1500){
-            skillsBox.style.animationName = "homeskillsBoxAnimationOn"
+            // skillsBox.style.animationName = "homeskillsBoxAnimationOn"
           }
-          else{
-            skillsBox.style.animationName = "homeskillsBoxAnimationOff"
-          }
+          // else{
+          //   skillsBox.style.animationName = "homeskillsBoxAnimationOff"
+          // }
         })
 
     },[])
